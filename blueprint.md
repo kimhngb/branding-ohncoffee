@@ -31,14 +31,20 @@ This document outlines the plan for creating a modern and visually appealing web
 
 ## Current Plan
 
-The current plan is to build the initial structure and styling of the website, starting with the `index.html` file.
+The current plan is to add a Dark/White mode toggle to the website to improve user experience and accessibility.
 
 **Steps:**
 
-1.  **Modify `index.html`:**
-    *   Update the page title to "Ohn Coffee".
-    *   Create the basic HTML structure for the header, hero, about, menu, and contact sections, and the footer.
-2.  **Modify `style.css`:**
-    *   Add basic styles for the body, fonts, and the overall layout.
+1.  **Refactor `style.css`:**
+    *   Introduce CSS variables for all colors (background, text, primary, secondary, accent).
+    *   Define a `.dark-theme` class that overrides these variables for dark mode.
+2.  **Modify `index.html`:**
+    *   Add a theme toggle button in the navigation bar.
 3.  **Modify `main.js`:**
-    *   Implement smooth scrolling for the navigation links.
+    *   Add logic to toggle the `.dark-theme` class on the `body` element.
+    *   Save the user's theme preference in `localStorage`.
+    *   Apply the saved theme on page load.
+    *   Update the `MenuItem` Web Component to respect the theme variables.
+4.  **Deployment:**
+    *   Commit all changes.
+    *   Push to the repository to trigger deployment.
