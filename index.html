@@ -1,13 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohn Coffee</title>
+    <title>Ohn Coffee - Futuristic Roasts & Community</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Interactive Cursor Elements -->
+    <div id="custom-cursor"></div>
+    <div id="cursor-follower"></div>
+    <div id="cursor-glow"></div>
+
     <header>
         <nav>
             <div class="logo">Ohn Coffee</div>
@@ -16,7 +20,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle">Dark Mode</button></li>
             </ul>
         </nav>
     </header>
@@ -24,75 +27,83 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h1>Experience the Perfect Cup</h1>
-                <p>Discover the finest coffee blends, crafted with passion and precision.</p>
+                <h1>Experience the<br>Perfect Cup</h1>
+                <p>Discover the finest coffee blends, crafted with passion and precision. A sensory journey from ethical origin to handcrafted brew.</p>
                 <a href="#menu" class="btn">Explore Our Menu</a>
             </div>
         </section>
 
         <section id="about">
-            <h2>About Ohn Coffee</h2>
-            <p>Ohn Coffee is more than just a place to grab a coffee. It's a community hub where coffee lovers can connect, relax, and savor the moment. Our mission is to provide an exceptional coffee experience, from the bean to the cup.</p>
+            <h2>Our Journey & Craft</h2>
+            <div class="about-grid">
+                <div class="about-text" style="max-width: 800px; line-height: 1.8; text-align: left;">
+                    <p>Ohn Coffee began with a simple vision: to bridge the gap between ethical sourcing and the ultimate sensory experience. Founded in 2024, our journey took us across the volcanic soils of Ethiopia and the high-altitude estates of Colombia to find beans that tell a story.</p>
+                    <p>Every batch of our beans is roasted in-house using a precision-controlled process that highlights the unique terroir of each origin. We believe coffee is a two-way conversation between the producer and the drinker. Our mission is to honor that dialogue by providing an exceptional experience, from the sustainable bean to your handcrafted cup.</p>
+                    <p>Our commitment extends beyond the cup. We work directly with small-scale farmers to ensure fair compensation and sustainable agricultural practices, fostering a community that thrives on quality and respect for nature.</p>
+                </div>
+            </div>
         </section>
 
         <section id="menu">
-            <h2>Our Menu</h2>
+            <h2>Curated Brews & Artisanal Bites</h2>
+            <p style="max-width: 700px; margin-bottom: 3rem; color: #888;">Our menu is a living collection of seasonal flavors, meticulously tested to ensure balance and depth. We prioritize local ingredients and transparency in every recipe, offering a unique blend of traditional techniques and modern innovation.</p>
             <div class="menu-items">
                 </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>123 Coffee Lane, Caffeine City, 12345</p>
-            <p>Email: contact@ohncoffee.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <h2>Connect With Our Community</h2>
+            <div class="contact-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; text-align: left;">
+                <div class="contact-info">
+                    <p style="margin-bottom: 2rem; color: #888;">Visit us at our flagship location or reach out for partnership opportunities. We value every voice in our coffee community.</p>
+                    <p><strong>Flagship Store:</strong> 123 Coffee Lane, Caffeine City, 12345</p>
+                    <p><strong>Email:</strong> contact@ohncoffee.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                </div>
 
-            <div class="partnership-form">
-                <h3>Partnership Inquiry</h3>
-                <form action="https://formspree.io/f/mpqegzza" method="POST">
-                    <div class="form-group">
-                        <label for="full-name">Name</label>
-                        <input type="text" id="full-name" name="name" required placeholder="Enter your full name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email-address">Email</label>
-                        <input type="email" id="email-address" name="email" required placeholder="Enter your email address">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required placeholder="How can we partner together?"></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Inquiry</button>
-                </form>
+                <div class="partnership-form">
+                    <h3 style="margin-bottom: 2rem; text-transform: uppercase; font-size: 1rem; letter-spacing: 2px;">Partnership Inquiry</h3>
+                    <form action="https://formspree.io/f/mpqegzza" method="POST">
+                        <div class="form-group">
+                            <label for="full-name" style="display: none;">Name</label>
+                            <input type="text" id="full-name" name="name" required placeholder="NAME">
+                        </div>
+                        <div class="form-group">
+                            <label for="email-address" style="display: none;">Email</label>
+                            <input type="email" id="email-address" name="email" required placeholder="EMAIL">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" style="display: none;">Message</label>
+                            <textarea id="message" name="message" required placeholder="MESSAGE"></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="margin-top: 2rem; width: 100%;">Send Inquiry</button>
+                    </form>
+                </div>
             </div>
         </section>
 
         <section id="comments">
-            <h2>Community Feedback</h2>
+            <h2 style="margin-bottom: 4rem;">Community Feedback</h2>
             <div id="disqus_thread"></div>
             <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
+                (function() {
                 var d = document, s = d.createElement('script');
                 s.src = 'https://ohn-coffee.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Ohn Coffee. All rights reserved.</p>
+        <div class="footer-content" style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+            <p style="color: #555;">&copy; 2024 Ohn Coffee. All rights reserved.</p>
+            <div class="footer-links" style="display: flex; gap: 2.5rem;">
+                <a href="privacy.html" style="text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">Privacy Policy</a>
+                <a href="terms.html" style="text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase;">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <script src="main.js"></script>
