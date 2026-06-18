@@ -26,25 +26,24 @@ This document outlines the plan for creating a modern and visually appealing web
 *   **Hero Section:** A full-width hero section with a captivating background image and a prominent headline.
 *   **About Section:** A section describing the story and passion behind Ohn Coffee.
 *   **Menu Section:** A well-structured menu showcasing the different coffee and food items.
-*   **Contact Section:** A section with the coffee shop's address, contact information, and a simple contact form.
+*   **Contact Section:** A section with the coffee shop's address, contact information, and a **Formspree-powered partnership inquiry form**.
 *   **Footer:** A footer with social media links and copyright information.
+*   **Dark/White Mode:** A toggle to switch between light and dark themes, with preference saved in local storage.
 
 ## Current Plan
 
-The current plan is to add a Dark/White mode toggle to the website to improve user experience and accessibility.
+The current plan is to add a professional partnership inquiry form to the contact section, allowing users to send messages directly via Formspree.
 
 **Steps:**
 
-1.  **Refactor `style.css`:**
-    *   Introduce CSS variables for all colors (background, text, primary, secondary, accent).
-    *   Define a `.dark-theme` class that overrides these variables for dark mode.
-2.  **Modify `index.html`:**
-    *   Add a theme toggle button in the navigation bar.
-3.  **Modify `main.js`:**
-    *   Add logic to toggle the `.dark-theme` class on the `body` element.
-    *   Save the user's theme preference in `localStorage`.
-    *   Apply the saved theme on page load.
-    *   Update the `MenuItem` Web Component to respect the theme variables.
-4.  **Deployment:**
-    *   Commit all changes.
-    *   Push to the repository to trigger deployment.
+1.  **Modify `index.html`:**
+    *   Add a `<form>` element to the `#contact` section.
+    *   Include input fields for Name, Email, and a Textarea for the message.
+    *   Configure the form to submit to Formspree.
+2.  **Modify `style.css`:**
+    *   Style the form to match the "Ohn Coffee" brand identity.
+    *   Ensure the form elements (inputs, labels, buttons) are responsive and accessible.
+    *   Apply theme variables to ensure the form looks great in both light and dark modes.
+3.  **Validation & Cleanup:**
+    *   Verify the form structure and styles.
+    *   Ensure the submit button follows the established button styles.
