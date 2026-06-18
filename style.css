@@ -218,6 +218,20 @@ h2 {
     font-size: 1.1rem;
 }
 
+#comments {
+    margin-top: 4rem;
+    border-top: 1px solid var(--accent-color);
+    padding-top: 4rem;
+}
+
+#disqus_thread {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--card-shadow);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 footer {
     background-color: var(--header-bg);
     color: var(--header-text);

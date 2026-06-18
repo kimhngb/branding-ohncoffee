@@ -27,23 +27,20 @@ This document outlines the plan for creating a modern and visually appealing web
 *   **About Section:** A section describing the story and passion behind Ohn Coffee.
 *   **Menu Section:** A well-structured menu showcasing the different coffee and food items.
 *   **Contact Section:** A section with the coffee shop's address, contact information, and a **Formspree-powered partnership inquiry form**.
+*   **Comments Section:** A **Disqus-powered comment system** at the bottom of the page for community interaction.
 *   **Footer:** A footer with social media links and copyright information.
 *   **Dark/White Mode:** A toggle to switch between light and dark themes, with preference saved in local storage.
 
 ## Current Plan
 
-The current plan is to add a professional partnership inquiry form to the contact section, allowing users to send messages directly via Formspree.
+The current plan is to integrate Disqus comments to encourage customer feedback and community engagement.
 
 **Steps:**
 
 1.  **Modify `index.html`:**
-    *   Add a `<form>` element to the `#contact` section.
-    *   Include input fields for Name, Email, and a Textarea for the message.
-    *   Configure the form to submit to Formspree.
+    *   Add a new `<section>` for comments below the contact section.
+    *   Insert the Disqus universal code snippet.
 2.  **Modify `style.css`:**
-    *   Style the form to match the "Ohn Coffee" brand identity.
-    *   Ensure the form elements (inputs, labels, buttons) are responsive and accessible.
-    *   Apply theme variables to ensure the form looks great in both light and dark modes.
-3.  **Validation & Cleanup:**
-    *   Verify the form structure and styles.
-    *   Ensure the submit button follows the established button styles.
+    *   Add styling for the comment section to ensure it has proper spacing and matches the site's container width.
+3.  **Deployment:**
+    *   Commit and push changes.
