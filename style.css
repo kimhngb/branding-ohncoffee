@@ -1,1 +1,116 @@
-/* Add styles here */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #F5F5DC;
+    color: #333;
+}
+
+header {
+    background-color: #6F4E37;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D2B48C;
+}
+
+main {
+    padding-top: 5rem;
+}
+
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1511920183353-321c136939a9?q=80&w=2574&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 8rem 2rem;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #D2B48C;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #C1A37E;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+footer {
+    background-color: #6F4E37;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
